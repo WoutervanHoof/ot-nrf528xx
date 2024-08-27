@@ -4,6 +4,14 @@
 [ot-gh-action-build-svg]: https://github.com/openthread/ot-nrf528xx/workflows/Build/badge.svg?branch=main&event=push
 
 ---
+This repository is a fork of the openthread example repository for the [nrf528xx](https://github.com/openthread/ot-nrf528xx). Its main purpose is to allow easy compilation of the example ot-cli or ot-rcp projects for the  nrf52833 and nrf52840 with my fork of openthread which allows to include a MUD URL with each device. This URL gets distributed to the needed parties in the network.
+
+## Build
+```bash
+./script/build nrf52833 USB_trans -DOT_MUDTHREAD=ON -DOT_MUD_URL="https://mud.url./mud"
+./script/build nrf52840 USB_trans -DOT_MUDTHREAD=ON -DOT_MUD_URL="https://mud.url./mud"
+```
+---
 
 # OpenThread on Nordic NRF528xx Example
 
